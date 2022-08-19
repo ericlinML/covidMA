@@ -2,5 +2,4 @@ client_secrets.json
 client_secretsTEMPSWAP.json
 .ipynb_checkpoints
 figures/
-*.ipynb
 data/
