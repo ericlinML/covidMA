@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from datetime import date, timedelta
 
 import json
 import praw
@@ -17,7 +18,11 @@ def getDate(row, *args):
         return str(row['Date'])[:10]
 
 
-df = pd.read_excel('data/covid-19-raw-data-8-18-2022.xlsx', sheet_name=None)
+runDay = date.today()
+yesterday = runDay - timedelta(days=1)
+dayString = yesterday.strftime("%B-%#d-%Y")
+
+df = pd.read_excel(f'https://www.mass.gov/doc/covid-19-raw-data-{dayString}/download', sheet_name=None)
 
 # Cases
 casesDf = df['Cases (Report Date)'].drop(axis=1, labels='Estimated active cases')

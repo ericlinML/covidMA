@@ -16,8 +16,11 @@ def getDate(varKey, colIndex):
     else:
         return f'Date parsing error for {varKey}'
 
+runDay = datetime.date.today()
+yesterday = runDay - datetime.timedelta(days=1)
+dayString = yesterday.strftime("%B-%#d-%Y")
 
-df = pd.read_excel('data/chapter-93-state-numbers-daily-8-19-2022.xlsx', sheet_name=None)
+df = pd.read_excel(f"https://www.mass.gov/doc/chapter-93-state-numbers-daily-report-{dayString}/download", sheet_name=None)
 
 varDict = {'Tested': 'Tested_24hours', 'Positive':'Pos_Last24', 'Died':'Died_last24'}
 
@@ -38,8 +41,10 @@ redditText = f"""
 Individuals who tested positive: {printDict['Positive'][1]} ({printDict['Positive'][0]}) \n
 Data from 7d prior for reference: {printDict['Positive'][3]} ({printDict['Positive'][2]})
 
+
 Total individuals who tested: {printDict['Tested'][1]} ({printDict['Tested'][0]}) \n
 Data from 7d prior for reference: {printDict['Tested'][3]} ({printDict['Tested'][2]})
+
 
 Deaths: {printDict['Died'][1]} ({printDict['Died'][0]}) \n
 Data from 7d prior for reference: {printDict['Died'][3]} ({printDict['Died'][2]})
@@ -89,7 +94,7 @@ tweetText = f"""
 {today} Massachusetts COVID daily data: 
 {printDict['Positive'][1]} new cases ({printDict['Positive'][3]} on {printDict['Positive'][2]})
 {printDict['Died'][1]} new deaths ({printDict['Died'][3]} on {printDict['Died'][2]})
-{printDict['Tested'][1]} individuals tested ({printDict['Tested'][3]}13 on 2022-08-11{printDict['Tested'][2]})
+{printDict['Tested'][1]} individuals tested ({printDict['Tested'][3]} on {printDict['Tested'][2]})
 
 Source: yet-to-be finalized data released weekdays from the Chapter93 State Daily Report https://www.mass.gov/info-details/covid-19-response-reporting
 """
