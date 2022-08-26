@@ -38,15 +38,15 @@ today = printDict['Tested'][0]
 redditText = f"""
 **Daily MA Covid Numbers reported from {printDict['Tested'][0]}:**
 
-Individuals who tested positive: {printDict['Positive'][1]} ({printDict['Positive'][0]}) \n
+\nIndividuals who tested positive: {printDict['Positive'][1]} ({printDict['Positive'][0]}) \n
 Data from 7d prior for reference: {printDict['Positive'][3]} ({printDict['Positive'][2]})
 
 
-Total individuals who tested: {printDict['Tested'][1]} ({printDict['Tested'][0]}) \n
+\nTotal individuals who tested: {printDict['Tested'][1]} ({printDict['Tested'][0]}) \n
 Data from 7d prior for reference: {printDict['Tested'][3]} ({printDict['Tested'][2]})
 
 
-Deaths: {printDict['Died'][1]} ({printDict['Died'][0]}) \n
+\nDeaths: {printDict['Died'][1]} ({printDict['Died'][0]}) \n
 Data from 7d prior for reference: {printDict['Died'][3]} ({printDict['Died'][2]})
 
 

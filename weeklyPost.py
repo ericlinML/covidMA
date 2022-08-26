@@ -114,9 +114,9 @@ Weekly Massachusetts COVID data published on {casesDate}:
 {cases} new cases at {round(positivity, 2)}% test positivity
 {deaths} new deaths
 {totalCOVIDhosp} total individuals hospitalized with COVID
-{covidOnlyHosp} individuals hospitalized primarily for COVID
+{covidOnlyHosp} hospitalized primarily for COVID
 
-From the mass.gov weekly COVID-19 Raw Data file https://www.mass.gov/info-details/covid-19-response-reporting
+From mass.gov's weekly COVID-19 Raw Data file https://www.mass.gov/info-details/covid-19-response-reporting
 """
 
 twitter.create_tweet(text=tweetText)
