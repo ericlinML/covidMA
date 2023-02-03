@@ -50,7 +50,7 @@ Data from 7d prior for reference: {printDict['Tested'][3]} ({printDict['Tested']
 Data from 7d prior for reference: {printDict['Died'][3]} ({printDict['Died'][2]})
 
 
-Data is drawn from the https://www.mass.gov/info-details/covid-19-response-reporting Chapter93 State Numbers Daily Report file. This data is still being reported daily on weekdays by Mass.gov.
+This is an automated post using data drawn from the https://www.mass.gov/info-details/covid-19-response-reporting Chapter93 State Numbers Daily Report file. This data is still being reported daily on weekdays by Mass.gov. It is important to note that these are reports of cases, tests, and deaths -- NOT the actual definitive count. These numbers are often revised post-hoc, but this is the hot-off-the-press daily number given by the state (which I report the following morning). 
 
 The test counts (total and positive only) include all test types that are reported that day. An individual who takes multiple tests of different types in one day is only counted once.
 The death counts can differ from the dashboard since the death counts reported here are not finalized (dashboard numbers are finalized). Deaths which are reported on Friday are rolled into Monday's reported numbers. Deaths reported from Saturday, Sunday, and Monday are rolled into Tuesday's reported numbers.
@@ -76,7 +76,7 @@ print(reddit.user.me())
 
 subr = 'CoronavirusMa'
 subreddit = reddit.subreddit(subr)
-title = f"{today} Massachusetts COVID daily data: {printDict['Positive'][1]} new cases, {printDict['Died'][1]} new deaths, {printDict['Tested'][1]} individuals tested"
+title = f"{today} Massachusetts COVID daily data report: {printDict['Positive'][1]} new cases, {printDict['Died'][1]} new deaths, {printDict['Tested'][1]} individuals tested"
 
 subreddit.submit(title, selftext = redditText, flair_id='1d8891e0-80e4-11ea-8ad7-0e20863e7c8d')
 

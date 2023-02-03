@@ -92,7 +92,7 @@ This data is from the https://www.mass.gov/info-details/covid-19-response-report
 - Total COVID patients in hospital: {totalCOVIDhosp} ({hospDate})
 - Patients hospitalized primarily due to COVID: {covidOnlyHosp} ({hospDate})
 
-Please note that there is some lag with how some of the data has been reported. 
+Disclaimer: there is some lag with how some of the data has been reported. 
 """
 
 subreddit.submit(title, selftext = text)
@@ -109,7 +109,7 @@ twitter = tweepy.Client(
 )
 
 tweetText = f"""
-Weekly Massachusetts COVID data published on {casesDate}:
+Weekly MA COVID data published on {casesDate}:
 
 {cases} new cases at {round(positivity, 2)}% test positivity
 {deaths} new deaths
